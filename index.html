@@ -139,6 +139,16 @@
               <label for="open-company">Company <span class="optional">/ optional</span></label>
               <input id="open-company" name="Company" type="text" maxlength="200" autocomplete="organization" placeholder="Company or project">
             </div>
+            <div class="field">
+              <label for="open-repository">Source repository <span class="optional">/ optional</span></label>
+              <input id="open-repository" name="Description" type="url" maxlength="2000" inputmode="url" autocomplete="url" placeholder="https://github.com/owner/repository" data-repository-url aria-describedby="open-repository-note open-repository-error">
+              <p class="field-note" id="open-repository-note">Public repository: paste its URL. Private repository: submit the URL only. We will arrange access through a read-only GitHub App. Never paste a password, token, SSH key, or other credential.</p>
+            </div>
+            <label class="consent-field repository-authorisation" for="open-repository-authorisation" data-repository-authorisation hidden>
+              <input id="open-repository-authorisation" type="checkbox" data-repository-authorisation-input aria-describedby="open-repository-error">
+              <span>I confirm that this repository is public or that I am authorised to request an assessment and arrange read-only access.</span>
+            </label>
+            <p class="form-error" id="open-repository-error" data-repository-error aria-live="polite"></p>
             <label class="consent-field" for="open-consent">
               <input id="open-consent" type="checkbox" required data-consent aria-describedby="open-consent-error">
               <span>I agree to receive early-access and product updates about OpenVuln by email. I can unsubscribe at any time. Read the <a href="privacy/">Privacy Notice</a>.</span>
